@@ -59,11 +59,11 @@ public class Main {
         BiegPoLesie gorki_ = new BiegPoLesie("Górki",mikrofon,przestrzenWLesie);
 
         gorki_.dodajElementTrasy(new Teren(RodzajTerenu.DROGA));
-        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.SCIEZKA));
-        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.SCIEZKA));
-        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.NISKI_LAS));
-        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.BAGNO));
-//        gorki_.dodajElementTrasy(FabrykaElementowTrasy.utworzElementTrasy(DziedzinaZadania.FIZYKA));
+//        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.SCIEZKA));
+//        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.SCIEZKA));
+//        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.NISKI_LAS));
+//        gorki_.dodajElementTrasy(new Teren(RodzajTerenu.BAGNO));
+        gorki_.dodajElementTrasy(new Zadanie(DziedzinaZadania.FIZYKA));
 //        gorki_.dodajElementTrasy(FabrykaElementowTrasy.utworzElementTrasy(DziedzinaZadania.MATEMATYKA));
 //        gorki_.dodajElementTrasy(FabrykaElementowTrasy.utworzElementTrasy(DziedzinaZadania.NAUKI_LESNE));
         gorki_.dodajElementTrasy(new Teren(RodzajTerenu.WYSOKI_LAS));

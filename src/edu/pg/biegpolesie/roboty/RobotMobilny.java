@@ -1,5 +1,6 @@
 package edu.pg.biegpolesie.roboty;
 
+import edu.pg.biegpolesie.DziedzinaZadania;
 import edu.pg.biegpolesie.Robot;
 import edu.pg.biegpolesie.RodzajTerenu;
 
@@ -31,5 +32,6 @@ public class RobotMobilny extends Robot {
                 return czynnikiLosowe.nextDouble() * 0.1; //Od 0.0 do 0.1
         }
     }
+
 
 }

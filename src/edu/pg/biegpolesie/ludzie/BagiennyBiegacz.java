@@ -1,6 +1,7 @@
 package edu.pg.biegpolesie.ludzie;
 
 import edu.pg.biegpolesie.Czlowiek;
+import edu.pg.biegpolesie.DziedzinaZadania;
 import edu.pg.biegpolesie.RodzajTerenu;
 
 
@@ -23,6 +24,4 @@ public class BagiennyBiegacz extends Czlowiek {
         } else
             return Math.min(1.0, super.predkoscPoruszaniaSie(rodzajTerenu) * 1.1);
     }
-
-
 }

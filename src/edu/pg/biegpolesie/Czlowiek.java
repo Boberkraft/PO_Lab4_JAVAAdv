@@ -45,7 +45,7 @@ public abstract class Czlowiek implements Uczestnik {
     }
 
     protected void wypowiedzSie(String tresc) {
-        osrodekKomunikacji.print(imie + " " + nazwisko + " mówi: ");
+        osrodekKomunikacji.print(" > " + imie + " " + nazwisko + " mówi: ");
         osrodekKomunikacji.println(tresc);
     }
 
@@ -74,5 +74,16 @@ public abstract class Czlowiek implements Uczestnik {
                 wypowiedzSie("O rany! Gdzie ja jestem?");
                 return humorIUwarunkowaniaOsobiste.nextDouble() * 0.2; //Od 0 do 0.2
         }
+    }
+
+    @Override
+    public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
+        boolean rozwiazane = humorIUwarunkowaniaOsobiste.nextDouble() <= 0.1;
+        if (rozwiazane) {
+            wypowiedzSie("Ale jestem mądry!");
+        } else {
+            wypowiedzSie("Ale jestem GŁĄB!");
+        }
+        return rozwiazane;
     }
 }

@@ -24,9 +24,19 @@ public abstract class Robot implements Uczestnik {
         mediumKomunikacyjne = ps;
     }
 
+    @Override
+    public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
+        boolean rozwiazane = czynnikiLosowe.nextDouble() <= 0.1;
+        if (rozwiazane) {
+            komunikuj("ROZWIAZANE");
+        } else {
+            komunikuj("TO JAKIŚ SZYFR...");
+        }
+        return rozwiazane;
+    }
 
     public final String identyfikuj() {
-        return model + " nr " + numerSeryjny;
+        return " > " + model + " nr " + numerSeryjny;
     }
 
     protected void komunikuj(String komunikat) {
@@ -38,6 +48,4 @@ public abstract class Robot implements Uczestnik {
     public String toString() {
         return identyfikuj();
     }
-
-
 }
