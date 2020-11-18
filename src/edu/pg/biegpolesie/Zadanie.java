@@ -7,7 +7,7 @@ public class Zadanie implements ElementTrasy {
     private final DziedzinaZadania dziedzinaZadania;
     private Map<Uczestnik, Double> uczestnicyNaZadaniu = new HashMap<>();
 
-    public Zadanie(DziedzinaZadania dziedzinaZadania) {
+    Zadanie(DziedzinaZadania dziedzinaZadania) {
         this.dziedzinaZadania = dziedzinaZadania;
     }
 
