@@ -51,7 +51,7 @@ class Komentator {
                     case MEZCZYZNA:
                         buff.append("Czy mógłby Pan powiedzieć kilka słów do mikrofonu?");
                         break;
-                    default: //Tak na wszelki wypadek ;) lol to nie ruby
+                    default: //Tak na wszelki wypadek ;)
                         buff.append("Poproszę o kilka słów do mikrofonu.");
                         break;
                 }
@@ -91,6 +91,10 @@ class Komentator {
         String slowo_uczestnik = odmienUczestnik(u);
         slowo_uczestnik = slowo_uczestnik.substring(0, 1).toUpperCase() + slowo_uczestnik.substring(1);
         mow(slowo_uczestnik + " " + u + " rozwiązuje teraz zagadkę " + dz + ". Element nr " + nrElementu + " trasy.");
+    }
+
+    public void relacjonujMete(Uczestnik u) {
+        mow("Brawo!! " + u + " dotarł na metę!!!");
     }
 
     private String odmienUczestnik(Uczestnik u) {

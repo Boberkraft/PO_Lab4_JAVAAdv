@@ -18,10 +18,13 @@ public class BagiennyBiegacz extends Czlowiek {
 
     @Override
     public double predkoscPoruszaniaSie(RodzajTerenu rodzajTerenu) {
-        if (RodzajTerenu.BAGNO.equals(rodzajTerenu)) {
+        double predkosc = super.predkoscPoruszaniaSie(rodzajTerenu);
+        if (rodzajTerenu == RodzajTerenu.BAGNO) {
             wypowiedzSie("Generalnie dobrze się idzie. Tylko trzeba stopy stawiać na tym bardziej suchym, twardszym mchu.");
-            return humorIUwarunkowaniaOsobiste.nextDouble() * 0.2 + 0.2; //Od 0.2 do 0.4
-        } else
-            return Math.min(1.0, super.predkoscPoruszaniaSie(rodzajTerenu) * 1.1);
+            predkosc += 0.2;
+        } else {
+            return predkosc * 1.1;
+        }
+        return Math.min(1.0, predkosc);
     }
 }

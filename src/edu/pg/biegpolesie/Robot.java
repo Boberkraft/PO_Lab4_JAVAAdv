@@ -36,7 +36,7 @@ public abstract class Robot implements Uczestnik {
     }
 
     public final String identyfikuj() {
-        return " > " + model + " nr " + numerSeryjny;
+        return model + " nr " + numerSeryjny;
     }
 
     protected void komunikuj(String komunikat) {

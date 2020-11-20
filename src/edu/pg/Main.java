@@ -2,7 +2,11 @@ package edu.pg;
 
 import edu.pg.biegpolesie.*;
 import edu.pg.biegpolesie.ludzie.BagiennyBiegacz;
+import edu.pg.biegpolesie.ludzie.Student;
+import edu.pg.biegpolesie.ludzie.StudentWETIOrazLesnik;
 import edu.pg.biegpolesie.roboty.RobotMobilny;
+import edu.pg.biegpolesie.roboty.Terminator;
+import edu.pg.biegpolesie.roboty.TerminatorL;
 import edu.pg.sup.Javalab2_sup;
 
 import java.io.PrintStream;
@@ -11,15 +15,14 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-
         Set<Uczestnik> uczestnicy = new HashSet<>();
         uczestnicy.add(new BagiennyBiegacz("Krzysztof", "Kowalski", Czlowiek.Plec.MEZCZYZNA));
         uczestnicy.add(new RobotMobilny(1));
+        uczestnicy.add(new Terminator(3912));
+        uczestnicy.add(new TerminatorL(3912));
+        uczestnicy.add(new Student("Alfred", "Archiwista", Czlowiek.Plec.MEZCZYZNA, "Historia"));
+        uczestnicy.add(new StudentWETIOrazLesnik("Apoloniusz",  "Gałązka", Czlowiek.Plec.MEZCZYZNA, "Informatyka"));
 
         Scanner scanner = new Scanner(System.in);
 
@@ -125,7 +128,7 @@ public class Main {
             try {
                 trasa.dodajElementTrasy(FabrykaElementowTrasy.utworzElementTrasy(wybor));
                 System.out.println("Dodane.");
-            } catch(IllegalArgumentException e) {
+            } catch (IllegalArgumentException e) {
                 System.out.println("Nie wiem co to.");
             }
         }

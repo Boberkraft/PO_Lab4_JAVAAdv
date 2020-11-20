@@ -45,7 +45,7 @@ public abstract class Czlowiek implements Uczestnik {
     }
 
     protected void wypowiedzSie(String tresc) {
-        osrodekKomunikacji.print(" > " + imie + " " + nazwisko + " mówi: ");
+        osrodekKomunikacji.print(imie + " " + nazwisko + " mówi: ");
         osrodekKomunikacji.println(tresc);
     }
 
@@ -76,9 +76,18 @@ public abstract class Czlowiek implements Uczestnik {
         }
     }
 
+    protected double rozwiazywaczZadan(DziedzinaZadania dziedzinaZadania) {
+        return 10;
+    }
+
+    final protected boolean rozwiazZadanieWynik(DziedzinaZadania dziedzinaZadania) {
+        double prawdopodobienstwo = rozwiazywaczZadan(dziedzinaZadania);
+        return Math.random()*100 <= prawdopodobienstwo;
+    }
+
     @Override
     public boolean rozwiazZadanie(DziedzinaZadania dziedzinaZadania) {
-        boolean rozwiazane = humorIUwarunkowaniaOsobiste.nextDouble() <= 0.1;
+        boolean rozwiazane = rozwiazZadanieWynik(dziedzinaZadania);
         if (rozwiazane) {
             wypowiedzSie("Ale jestem mądry!");
         } else {

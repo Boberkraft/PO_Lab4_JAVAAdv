@@ -82,8 +82,13 @@ public class BiegPoLesie {
         if (i < elementyTrasy.size()) {
             elementyTrasy.get(i).dodajUczestnika(u);
         } else {
-            meta.add(u);
+            dodajDoMety(u);
         }
+    }
+
+    private void dodajDoMety(Uczestnik u) {
+        komentator.relacjonujMete(u);
+        meta.add(u);
     }
 
     private int zmaganiaZElementemTrasy(int indeksElementuTrasy) {
@@ -130,6 +135,4 @@ public class BiegPoLesie {
         }
         return liczbaUczestnikow;
     }
-
-
 }
